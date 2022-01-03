@@ -1,5 +1,5 @@
-# Trial
-## Git-Beginner
+# Python
+## yotube [나도코딩_파이썬](https://youtu.be/kWiCuklohdY)
 
 Let's make a simple source code!
 ```Javascript
