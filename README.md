@@ -38,7 +38,7 @@ print("뒤 7자리 : " + jumin[7:]) # 7 부터 끝 까지
 print("뒤 7자리 (뒤에부터계산) : " + jumin[-7:]) # 맨뒤에서 7번째부터 끝까지
 ```
 
-###문자열 처리 함수
+###문자열처리함수
 ```python
 python = "Python is Amazing"
 print(python.lower())   # 전부 대문자로 출력
