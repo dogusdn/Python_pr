@@ -10,6 +10,10 @@ for(let a = 0; a <= 10; a++){
     }
    }
 ```
+
+```python
+
+````
     
 ### What is Git?
 * 레시피 책
