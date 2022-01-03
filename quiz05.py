@@ -23,7 +23,7 @@ count = 0
 
 for customer in range(1, 51): # 1~50 까지의 수
 
-    time = randrange(5,50) # 5 ~ 50 사이의 임의의 값을 생성함
+    time = randrange(5,51) # 5 ~ 50 사이의 임의의 값을 생성함
 
     if (time >= 5 and time <= 15):
         check = "O"
@@ -34,3 +34,19 @@ for customer in range(1, 51): # 1~50 까지의 수
     print("[{0}] {1}번째 손님 (소요시간 : {2}분)".format(check, customer, time))
 
 print("총 탑승 승객 : {0} 명".format(count))
+
+
+## 강사 코드
+
+from random import *
+cnt = 0 # 총 탑승 승객의 수
+for i in range(1, 51): # 1~50 이라는 수
+    time = randrange(5, 51) # 5분 ~ 50분 소요시간
+    if 5 <= time <= 15:
+        print("[O] {0}번째 손님 (소요시간 : {1}분)".format(i, time))
+        cnt += 1
+    else:
+        print("[ ] {0}번째 손님 (소요시간 : {1}분".format(i, time))
+
+print("총 탑승 승객 : {0} 분".format(cnt))
+

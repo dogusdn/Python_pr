@@ -211,3 +211,17 @@ python.add("김연주")
 
 # java 를 잊어버림
 java.remove("고우현")
+
+
+# 자료구조의 변경이 가능함
+menu = {"커피", "우유", "주스"}
+print(menu, type(menu))
+
+# type -> list 형식으로 변경
+menu = list(menu)
+
+# type -> tuple 형식으로 변경
+menu = tuple(menu)
+
+# type -> set 형식으로 변경
+menu = set(list)

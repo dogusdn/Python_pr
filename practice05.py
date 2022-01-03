@@ -55,3 +55,40 @@ def profile(name, age, main_lang):
 # 순서가 섞여 있어도 상관 없다!
 profile(name="도현우", age = 26, main_lang="파이썬")
 profile(main_lang="자바", name="고우현", age=26)
+
+
+## 가변인자
+def profile(name, age, lang1, lang2, lang3, lang4, lang5):
+    print("이름 : {0}\t나이 : {1}\t".format(name, age), end=" ")
+    print(lang1, lang2, lang3, lang4, lang5)
+
+def profile(name, age, *language):
+    print("이름 : {0}\t나이 : {1}\t".format(name, age), end=" ")
+    for lang in language:
+        print(lang, end=" ")
+    print()
+
+profile("유재석", 20, "Python", "Java", "C", "C++", "C#")
+profile("김태호", 25, "Kotlin", "Swift", "", "", "")
+
+## 지역변수와 전역변수
+# 지역변수 : 함수 호출 될 때 만들어졌다가 끝나면 사라짐
+# 전역변수 : 프로그램 어디에서든 부를 수 있는 변수
+
+gun = 10
+
+def checkpoint(soldiers): # 경계근무
+    # 지역변수로 초기화를 시켜줘야지 변수를 사용할 수 있음
+    global gun # 전역 공간에 있는 gun 을 사용
+    gun = gun - soldiers
+    print("[함수 내] 남은 총 : {0}".format(gun))
+
+def checkpoint_ret(gun, soldiers):
+    gun = gun - soldiers
+    print("[함수 내] 남은 총 : {0}".format(gun))
+    return gun
+    
+
+print("전체 총 : {0}".format(gun))
+checkpoint(2) # 2명이 경계 근무를 나감
+print("남은 총 : {0}".format(gun))
