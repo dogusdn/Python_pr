@@ -68,6 +68,100 @@ print(f"나는 {age}살이며, {color} 색을 좋아합니다.")
 print("F:\\github\\Python_PR>")
 ```
 
+### 리스트 []
+```python
+subway = ["유재석", "조세호", "박명수"]
+
+# 조세호 는 몇 번째 칸에 타고 있는가?
+print(subway.index("조세호"))
+
+# 하하 가 다음 정류장에 다음 칸에 탐
+subway.append("하하")
+
+# 정형돈을 유재석과 조세호 사이에 넣음
+subway.insert(1, "정형돈")
+
+# 지하철에 있는 사람을 한 명씩 뒤에서 꺼낸다.
+print(subway.pop())
+```
+
+### 사전
+```python
+cabinet = {3 : "유재석", 100 : "김태호"}
+cabinet = {"A-3" : "유재석" , "B-100" : "김태호"} # key에 문자열도 가능
+print(cabinet[3]) # 유재석
+print(cabinet.get(3)) # 유재석
+print(cabinet[5]) # 오류 발생 후 프로그램 종료
+print(cabinet.get(5)) # NONE 오류발생 X 프로그램 종료되지 않음
+print(cabinet.get(5, "사용가능"))   # None 대신 사용가능 메시지 표출
+print(3 in cabinet) # 키가 있는지 확인 True
+print(5 in cabinet) # False
+
+# 새로운 손님
+cabinet["C-20"] = "조세호"
+# 나간 손님
+del cabinet["A-3"]
+# key 들만 출력함
+print(cabinet.keys())
+# value 들만 출력
+print(cabinet.values())
+# key, value 쌍으로 출력함
+print(cabinet.items())
+# 목욕탕을 폐점
+cabinet.clear()
+```
+
+### 튜플
+* 내용을 추가하거나 변경할 수 없다.
+* 대신 리스트보다 속도가 빠르다
+* 변경되지 않는 값들을 다룰 때 유용함
+```python
+menu = ("돈까스", "치즈까스")
+print(menu[0]) # 돈까스
+print(menu[1]) # 치즈까스
+# menu.add("생선까스") # 튜플은 add라는 기능을 제공하지 않음
+# 값을 추가하던지 변경할 수 없음
+
+(name, age, hobby) = ("김종국", 20, "코딩")
+print(name, age, hobby)
+```
+
+### 집합 (set)
+* 중복 안됨, 순서 없음
+```python
+my_set = {1,2,3,3,3} # {1,2,3} 만 출력! 중복이 안되기 때문에
+
+java = {"유재석", "김태호", "양세형"}
+python = set(["유재석", "박명수"])
+
+# 교집합 (java 와 python을 모두 할 수 있는 개발자)
+print(java & python)
+print(java.intersection(python))
+
+# 합집합 (java 할 수 있거나 python을 할 수 있는 개발자)
+print(java | python)
+print(java.union(python))
+
+# 차집합 (java는 할 수 있지만 python은 할 줄 모르는 개발자)
+print(java - python)
+print(java.difference(python))
+
+# python 할 줄 아는 사람이 늘어남
+python.add("김태호")
+
+# java를 까먹었음
+java.remove("김태호")
+```
+
+### 자료구조의 변경
+```python
+menu = {"커피", "우유", "주스"}
+menu = list(menu)
+menu = tuple(menu)
+menu = set(menu)
+```
+
+
 ### What is Git?
 * 레시피 책
 * 도넛 만들기
