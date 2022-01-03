@@ -1,18 +1,14 @@
 # Python
 ## yotube [나도코딩_파이썬](https://youtu.be/kWiCuklohdY)
 
-Let's make a simple source code!
-```Javascript
-
-for(let a = 0; a <= 10; a++){
-  if(a % 2 === 0){
-    console.log('짝수만 ${a}');
-    }
-   }
-```
-
+### 숫자 처리 함수
 ```python
-
+print(abs(-5)) # 절댓값 5
+print(pow(4, 2)) # 4^2 = 4 * 4 = 16
+print(max(5, 12)) # 12
+print(min(5, 12)) # 5
+print(round(3.14)) # 반올림 값 3
+print(round(4.99))  # 5
 ````
     
 ### What is Git?
